@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Fifteen Puzzle</title>
+		<link rel="stylesheet" href="./website.css">
+		<script type="text/javascript" src="fifteen.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="guide"><h1>Fifteen Puzzle</h1></div>
+			</div><!--id="header"-->
+			<div id="content">
+            <!--#this is where you place the contents of your web page-->
+                <div id="GameType">
+                    <div id="GameTypeImage">
+                    <label id = "PI"> Puzzle Image : </label> <select id="SPI">
+                        <option value="0">SELECT</option>
+                        <option value="m">MARIO</option>
+                        <option value="s">Spiderman</option>
+                        <option value="b">Batman</option>
+                        <option value="c">Captian America</option>
+                        </select>
+                    </div><br/>
+                    <div id="PuzzleSize">
+                    <label id = "PS"> Puzzle Size : </label> <select id ="SPS">
+                         <option value="0">SELECT</option>
+                        <option value="10">10X10</option>
+                        <option value="8">8X8</option>
+                        <option value="6">6X6</option>
+                        <option value="4">4X4</option>
+                        <option value="3">3X3</option>
+                        </select>
+                    </div><br/>
+                    
+                    <div id="btn"><input type="button" id="loadGame" value="Load the Puzzle" /></div>
+                    
+                </div><br/>
+                <div id="Gametime">
+            <span style=”font-size: 11px”>Time Elasped</span><br />
+            <br/> <label id="timeElapsed"> 0 Seconds</label>
+            </div>
+                <table id="table">
+                </table>
+            <br>
+            <br>
+                <div id="hiddenDiv">             
+                    <label>Rows <input type="text" name="rows" id="rows" value="4" size="2" disabled></label>
+                    <label>Columns <input type="text" name="columns" id="columns" value="4" size="2" disabled></label>
+                    <input type="button" id="newGame" value="Start New Game"><br><br>
+                   <label id="hideLabel"></label>
+                    Number Of Moves: <span id="moves">0</span> </div>  
+			    </div><!--content-->
+		</div><!--wrapper-->
+	</body>
+</html>
