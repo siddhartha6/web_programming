@@ -1,0 +1,51 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+      <title>Assignment-6 Part 2</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         body{
+         	background-repeat:no-repeat;
+         	background-color:cyan;	
+            text-align: center;	
+         }
+         .drag{ 
+            color: red;
+            margin-right: 200px;
+            font-weight: bold;
+         }
+         .drop{
+         	margin-left: 200px;
+         }		 
+      </style>
+      <script>
+         $(function() {
+            $('.drag').draggable({ revert: true });
+            $('.drop').droppable({
+               hoverClass: 'active',
+               drop: function(e, ui) {
+                  $( this );
+                  var r = confirm("Are you sure!! You want to delete this item.");
+				  if (r == true) {
+							ui.draggable.remove().html();
+				  } 
+               }
+            });
+         });
+      </script>
+   </head>
+   <body>
+   <br/><a href="part1.html">PART 1</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="part3.html">PART 3</a>
+   <h3>Part 2</h3>
+   <h4>Drag and Drop below items into Trash can</h4>
+      <div class="drag"><p>Results</p></div><br>
+      <div class="drag"><p>Marks</p></div><br>
+      <div class="drag"><p>Exams</p></div>
+      <div class="drop">Trash Can<br><img src="trash.jpg" height="150px" width="100px" alt="trash"/></div>
+	</div>
+     
+   </body>
+</html>

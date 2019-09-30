@@ -1,0 +1,90 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment-6 Part 1</title>
+	<style>
+		#card, #wire {
+			display: none;
+        }
+		body{
+			background-repeat:no-repeat;
+			background-color:cyan;
+			text-align: center;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("input[name='type']").change(function() {
+				if ($("input[value='credit']:checked").val()) {
+					$("#card").show("slow");
+					$("#wire").hide();
+				} else if ($("input[value='wired']:checked").val()) {
+					$("#wire").show("slow");
+					$("#card").hide();
+				}
+			});
+			$(".nan").change(function() {
+				this.value = parseInt(this.value);
+				if (this.value == "NaN") {
+					this.value = "";
+				}
+			});	
+          	$("#number").keypress(function (e) {
+     			if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+				    $("#errmsg1").html("Numbers Only").show().fadeOut("slow");
+				    return false;
+    			}
+   			});
+		    $("#month").keypress(function (e) {
+			    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+			       
+			        	$("#errmsg2").html("Numbers Only").show().fadeOut("slow");
+			            return false;
+			    }
+		    });
+		   $("#year").keypress(function (e) {
+		     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+		       
+		        $("#errmsg3").html("Numbers Only").show().fadeOut("slow");
+		        return false;
+		    }
+		   });
+		    $("#security").keypress(function (e) {
+		     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+		       
+		        $("#errmsg4").html("Numbers Only").show().fadeOut("slow");
+		        return false;
+		     }
+		    });
+   
+ 
+ 		});
+	</script>
+</head>
+
+<body>
+	<br/><a href="part2.html">PART 2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="part3.html">PART 3</a>
+	<h3>Part 1</h3>
+		<div>
+			<h4>Make Your Payment</h4>
+			<label><input type="radio" value="credit" name="type"/>Credit Card</label><br/>
+			<label><input type="radio" value="wired" name="type"/>Wire transfer</label><br/>
+			<button>Buy!</button>
+		</div><br>
+		<div id="card">
+			<label>Card number:</label>
+			<input type="text" class="nan" id="number" /><span id="errmsg1"></span><br/>
+			<label>Expiration:</label>
+			<input type="text" class="nan" id="month" /><span id="errmsg2"></span>/
+			<input type="text" class="nan" id="year" /><span id="errmsg3"></span><br/>
+			<label>3-digit security number:</label>
+			<input type="text" class="nan" id="security" /><span id="errmsg4"></span><br/>
+		</div>
+		<div id="wire">
+			Transfer the amount to: reg. $957.00, to account '0009286322'.
+		</div>
+	</body>
+</html>

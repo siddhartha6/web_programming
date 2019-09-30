@@ -1,0 +1,70 @@
+body {
+    background-color: #FFCC00;
+    color: #000000;
+    font-family:Georgia;
+}
+#banner {
+    text-align: center;
+}
+#banner1 {
+    text-align: center;
+}
+h1,h2 {
+	color: #A4A400;
+	background-color: #F0F0F0;
+	letter-spacing: 3px;
+}
+.tbanner{
+	color: #A4A400;
+	background-color: #F0F0F0;
+	letter-spacing: 3px;
+}
+#navBar{
+	margin-left: 3%;
+}
+#navBar li{
+	padding: 10px;
+    display: inline;
+    background-color: #dcd191;
+    color: blue;
+    text-decoration: none;
+	border-right-color:blue;
+	border-right-style:solid;
+	border-right-width:10px;
+	overflow:hidden;
+}
+a:hover {
+  background-color: cyan;
+}
+.salad {
+	width:250px;
+	height: 170px;
+	float:right;
+}
+.tbold{
+	font-weight: bold; 
+}
+.foodchart{
+	width:350px;
+	height: 250px;
+}
+th{
+	background-color: #003366;
+}
+table{
+	color: #ffffff;
+	background-color: #CC9933;
+	border:2px solid white;
+	padding: 5px;
+	border-collapse: collapse;
+}
+th,td{
+	border:2px solid white;
+	padding: 5px;
+}
+.table2{
+	margin-top: 20px;
+}
+ul {
+  list-style-image: url('right.svg');
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+	<title>Form</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="pageContainer centerText">
+         <form method="post" action="processor.php" class="formLayout">
+            <div class="formGroup">
+               <label>Select Font Family:</label>
+               <select name="fontfamily" required>
+               	<option value="" selected disabled>Choose Font Family</option>
+               	<option value="tnr">Times New Roman</option>
+               	<option value="hel">Helvetica</option>
+               	<option value="ss">Sans Serif</option>
+               </select>
+            </div>
+            <div class="formGroup">
+               <label>Select Font Size:</label>
+               <select name="fontsize" required>
+               	<option value="" selected disabled>Choose Font Size</option>
+               	<option value="normal">15px</option>
+               	<option value="it">25px</option>
+               	<option value="ob">35px</option>
+               </select>
+            </div>
+            <div class="formGroup">
+               <label>Select Text Color:</label>
+               <select name="textcolor" required>
+               	<option value="" selected disabled>Choose Text Color</option>
+               	<option value="blue">Blue</option>
+               	<option value="yellow">Yellow</option>
+               	<option value="red">Red</option>
+               </select>
+            </div>
+            <div class="formGroup">
+               <label>Description:</label>
+               <textarea name="desc" rows="10" cols="30" required="" placeholder="Enter Description"></textarea>
+            </div>
+            <div class="formGroup">
+               <label></label>
+               <input type="submit" name="submit" value="Submit Form"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

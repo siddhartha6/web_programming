@@ -1,0 +1,87 @@
+<?php
+    session_start();
+    $username = "";
+    if(isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+    }
+    else{
+      header("location: login.php");
+   }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Play</title>
+    <link rel="stylesheet" type="text/css" href="stylesheetproject1.css">
+</head>
+<body>
+
+<table id="mainframe">
+    <tr>
+        <td>
+            <ul>
+                <li><a href="Correct.php">Home</a></li>
+                <li><a href="game/PlayCorrect.php">Play</a></li>
+                <li><a class="active" href="howtoplay.php">How to play</a></li>
+				<li class="liclass"> <a href="#">GitHub Repository</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Objective</h3>
+            <p>The Goal of "Correct!" is to match all question cards to
+                their respective answer cards, before the timer runs out!</p>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="images/GameDesign/Slide5.jpg"
+                 alt="Correct! (Sample Gameboard)"></td>
+    </tr>
+    <tr>
+        <td>
+            <h3>How to play: Steps</h3>
+        </td>
+    </tr>
+    <tr>
+    	<td>
+    		<h3>Step 1</h3>
+    		<p>At the beginning of each round, the player will be presented
+                with a grid of cards, all face-down. Half of these cards have
+                questions on their face, the other half have the answers to those
+                questions.</p>
+    	</td>
+    </tr>
+    <tr>
+        <td><img src="images/GameDesign/Slide4.jpg"
+                 alt="Correct! (Sample Gameboard)"></td>
+    </tr>
+    <tr>
+     	<td>
+     		<h3>Step 2</h3>
+     		<p>The player must find the matching cards by selecting two
+                cards at a time to flip over. If the cards are a match, they remain
+                face-up. If not, the cards are flipped back over, and the player
+                must remember their location.</p>
+     	</td>
+    </tr>
+    <tr>
+        <td><img src="images/GameDesign/Slide2.jpg"
+                 alt="Correct! (Sample Gameboard)"></td>
+    </tr>
+    <tr>
+    	<td>
+    		<h3>Step 3</h3>
+    		<p>If the player succeeds in matching all their cards, the player wins the game.
+    		The player has successfully learned more definitions through this fun, engaging game. Great Job!</p>
+    </tr>
+    <tr>
+        <td><img src="images/GameDesign/Slide3.jpg"
+                 alt="Correct! (Sample Gameboard)"></td>
+    </tr>
+</table>
+
+</body>
+</html>

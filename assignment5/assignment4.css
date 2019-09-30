@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body{
+	text-align: center;
+	font-family: serif;
+	font-size: 20px;
+	width:100%;
+	margin:auto;
+	background-color: gray;
+}
+h1{
+	font: normal;
+	font-family: serif;
+	text-align: center;
+	padding:10px;
+}
+
+.mainDiv{
+	margin-left:15%;
+	margin-right:auto;
+    width: 100%;
+    text-align: center;
+}
+
+td.title{
+	text-align: right;
+}
+
+table.gameTable{
+	text-align: center;
+	width:700px;
+	height:700px;
+}
+table.gameTable, table.gameTable td{	
+	border: 2px solid blue;
+}
+
+table.gameTable{
+    border-collapse: collapse;
+}
+
+table.gameTable td{
+   background-color: white;
+   width:75px;
+   height:75px;
+}
+
+img{
+   width:75px;
+   height:75px;
+   border: 2px solid black;
+}
+

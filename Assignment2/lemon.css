@@ -1,0 +1,32 @@
+.tbold{
+	font-weight: bold; 
+}
+h3{
+	color:green;
+	background-color: silver;
+}
+.hl {
+  	width: 100%;
+	height: 3px;
+	background-color:silver;
+	border: 0 none;
+	margin-top: 20px;
+	margin-bottom:20px;
+}
+a:hover {
+  background-color: cyan;
+}
+h2{
+	color:orange;
+}
+.lstyle{
+	list-style: none;
+}
+#navBar{
+	margin-left: 0%;
+	margin-bottom: 3%
+}
+#navBar li{
+	padding: 10px;
+    display: inline;
+}
